@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:all": "concurrently \"bun run dev\" \"bun run dev:webhook\"",
+    "dev:webhook": "ngrok http --domain=ewe-pet-vaguely.ngrok-free.app 3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
